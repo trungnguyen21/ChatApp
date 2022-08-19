@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="container-fluid d-flex align-items-center justify-content-center vertical-align animate__animated animate__fadeIn">
+    <div class="card v-stack gap-2">
+        <div class="d-flex justify-content-center">
+            <iconify-icon icon="logos:metamask-icon" style="font-size: 3rem; padding:1rem"></iconify-icon>
+        </div>
+        <div id="addressField" class="container-fluid d-flex justify-content-center">
+          <div class="px-5 py-5">
+            <button class="btn btn-outline-primary" id="loginButton" onclick="loginWithMetaMask()">Connect Wallet</button> <br>
+            <p id="userWallet"></p>
+          </div>   
+        </div> 
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+    window.userWalletAddress = null
+    const loginButton = document.getElementById('loginButton')
+    const userWallet = document.getElementById('userWallet')
+    const loginField = document.getElementById("addressField")
+
+    async function loginWithMetaMask() {
+      if (!window.ethereum) {
+        loginField.innerHTML = 
+        `
+        <p class="paragraphs">
+          You have not installed Metamask! <br> Please refer to 
+          <a href="https://docs.metamask.io/guide/" target=_blank>this guide</a>
+          for more information.
+        </p>
+        `
+      }
+      
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+        .catch((e) => {
+          console.error(e.message)
+          return
+        })
+      if (!accounts) { return }
+
+      window.userWalletAddress = accounts[0]
+
+      // var sendData = $.ajax({
+      //   type: "POST",
+      //   data: {"address": window.userWalletAddress},
+      // })
+
+      loginButton.remove()
+      loginField.innerHTML = 
+        `<form action="/connect" method="POST" class="container px-5 pb-5"> 
+            <div class="container-fluid pb-2">
+              <label for="address" class="form-label text-black">Wallet Address</label>
+              <input readonly value=${window.userWalletAddress} type="text" id="address" name="address" class="form-control">
+              <label for="username" class="form-label text-black pt-1">Choose an username</label>
+              <input autocomplete="off" type="text" id="username" name="username" placeholder="Enter a username" class="form-control">
+            </div>
+            <div class="container text-center"
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-primary" type="submit">Log In</button>
+                </div>
+              </div>
+            </div>
+        </form>
+        `;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loginWithMetaMask()
+    });
+
+  </script>
+
+{% endblock %}

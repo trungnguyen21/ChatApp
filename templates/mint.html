@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mint
+{% endblock %}
+
+{% block main %}
+<div>
+    <section class="sectionSettings">
+
+        <div class="container-fluid pb-5" style="margin-left: 7rem !important; width:70rem;">
+            <h1 class="header animate__animated animate__fadeIn" style="margin-top: 5rem;">Sign-up has never been easier</h1>
+            <p class="subheader animate__animated animate__fadeIn animate__delay-1s">
+                Connect your wallet, mint the NFT, you are now one of the Pioneers <br>
+            </p>
+        </div>
+
+        <div class="container d-flex justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+
+    </section>
+    
+    <section class="sectionSettings">
+        
+        <div class="container pt-7">
+            <div class="position-relative" data-aos="fade-up">
+                <div class="position-absolute top-0 start-50 translate-middle">
+                    <iframe
+                    src="https://gateway.ipfscdn.io/ipfs/QmUfp6thZQTmNKS6tzijJpxdoBe9X7spHwzRjUh3RPTAwF/edition-drop.html?contract=0xdc024d592D197053BdEcB966121C323A846EF1a5&chainId=80001&tokenId=0&relayUrl=https%3A%2F%2Fapi.defender.openzeppelin.com%2Fautotasks%2F60fba149-ee4b-44f9-9097-9d4890e452e0%2Fruns%2Fwebhook%2Ffd2f9a65-55a3-4318-bae0-42b2bf492f78%2FAVHm2xHzMJi3BUpbiJQcHP&theme=dark"
+                    width="800px"
+                    height="600px"
+                    style="max-width:100%;"
+                    frameborder="0"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+</div>
+
+{% endblock %}

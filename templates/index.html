@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div>
+
+    <section class="sectionSettings" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px 100%" id="home">
+        
+        <div class="container-fluid vertical-align">
+            <div id="landingPage">
+                <div class="col">
+                    <h1 class="header animate__animated animate__fadeIn">Freely</h1>
+                    <p class="subheader animate__animated animate__fadeIn animate__delay-1s">A decentralized Chat app built with Web3.</p>
+                    <form id="launchButton" action="/connect">
+                        <button class="btn btn-light animate__animated animate__fadeInDown animate__delay-2s" style="margin-left: 10rem" type="submit">Launch</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <section class="sectionSettings">
+
+        <!-- divider -->
+        <hr class="solid">
+
+        <div id="instructions" data-aos="fade-up">
+            <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 50px 40%" id="howto">
+                <p class="title d-flex justify-content-center">Instructions</p>
+            </div>
+    
+            <div class="container text-white paddingSides" style="padding-bottom: 1rem;">
+                <div class="row" style="padding-bottom: 1rem;">
+                    <div class="col-sm-3">
+                        <h2 class="text-end">Step 1</h2>
+                    </div>
+                    <div class="col">
+                        <p class="paragraphs text-white">
+                            Connect to Metamask Wallet. This website operates on Mumbai chain (a Polygon testnet), please refer below as to how to get testnet MATIC <br>
+                            <a href="https://docs.metamask.io/guide/">Guide to setup Metamask Wallet</a> <br>
+                            <a href="https://docs.polygon.technology/docs/develop/network-details/network/">Mumbai faucet</a> 
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="row" style="padding-bottom: 1rem;">
+                    <div class="col-sm-3">
+                        <h2 class="text-end">Step 2</h2>
+                    </div>
+                    <div class="col">
+                        <p class="paragraphs text-white">Mint the NFT! <br> Note: only 1 per wallet</p>
+                    </div>
+                </div>
+    
+                <div class="row" style="padding-bottom: 1rem;">
+                    <div class="col-sm-3">
+                        <h2 class="text-end">Step 3</h2>
+                    </div>
+                    <div class="col">
+                        <p class="paragraphs text-white">Congratulations. You are now one of the first 5000 people to get exclusive access to the content of this website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+{% endblock %}
