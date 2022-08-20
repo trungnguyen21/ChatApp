@@ -43,7 +43,11 @@ Submit a form to app.py for NFT balance validation:
 *mint.html*
 
 Simple widget embeded on the page from ThirdWeb. The page then handles Wallet connection and gasless minting.
+
 **NFT**: Non-fungible Token
+
 **Edition-drop NFT**: One NFT, multiple owners. [The Pioneer NFT](https://thirdweb.com/mumbai/edition-drop/0xdc024d592D197053BdEcB966121C323A846EF1a5?tabIndex=0) acts as a pass to access content on the webpage. 
+
 **Mumbai Testnet**: [A Testnet on Polygon Network](https://docs.polygon.technology/docs/develop/network-details/network/). Fast transactions with little to no gas fee, uses MATIC token. 
+
 **Gasless minting**: I followed ThirdWeb documentation and set up a Relayer with an automated task to pay the gas fee for the minting process on [OpenZepplin Defender](https://www.openzeppelin.com/defender). Users can now mint the NFT without the need to pay any fees.
