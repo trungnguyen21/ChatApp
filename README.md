@@ -19,6 +19,7 @@ Functions Flow chart:
 
 ### Components of the project:
 *layout.html*
+
 The file is the backbone of the project and was used on every site. It consisted of 3 main parts: the Navigation bar, the main body and the footer. 
 - The Navigation bar: integrates [Scrollspy](https://getbootstrap.com/docs/5.2/components/scrollspy/) from Bootstrap with smooth scrolling enabled.
 - Main body: left blank for templating.
@@ -26,11 +27,13 @@ The file is the backbone of the project and was used on every site. It consisted
 
 
 *index.html*
+
 Consisted of 2 sections: the main landing page and the instructions, separated by a lightweight divider. 
 - Landing page: animated text components, small button to proceed to authentication page.
 - Instructions: used Animation On Scroll Library, simple fade-in animation when users reached the section.
 
 *connect.html*
+
 Simple card with Metamask logo and Connect button.  Automatically prompting users to connect their wallet with `window.addEventListener('DOMContentLoaded')`
 Submit a form to app.py for NFT balance validation:
 - User has not installed Metamask: Card updates with guides to install Metamask extension.
@@ -38,6 +41,7 @@ Submit a form to app.py for NFT balance validation:
 - User has installed Metamask and has minted the NFT: Prompting a username of choice and continue to the chatroom.
 
 *mint.html*
+
 Simple widget embeded on the page from ThirdWeb. The page then handles Wallet connection and gasless minting.
 **NFT**: Non-fungible Token
 **Edition-drop NFT**: One NFT, multiple owners. [The Pioneer NFT](https://thirdweb.com/mumbai/edition-drop/0xdc024d592D197053BdEcB966121C323A846EF1a5?tabIndex=0) acts as a pass to access content on the webpage. 
