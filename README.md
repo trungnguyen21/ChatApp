@@ -1,5 +1,5 @@
 # Freely - A Chatapp built on Web3
-### Video Demo: TODO
+### Video Demo: https://youtu.be/Mz1TT9GQ9CQ
 ### Description:
 
 Welcome to Freely - a Web3 application that enables decentralization in a simple chat app! The webapp was written in Python (Flask), JavaScript, HTML and CSS.
